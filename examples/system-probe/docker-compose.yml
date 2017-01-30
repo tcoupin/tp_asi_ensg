@@ -1,0 +1,25 @@
+version: "3.0"
+services:
+  grafana:
+    image: grafana/grafana:4.1.1-1484211277
+    volumes:
+      - grafana-config:/etc/grafana
+      - grafana-data:/var/lib/grafana
+      - grafana-log:/var/log/grafana
+    ports:
+      - "3000:3000"
+    links:
+      - influxdb
+  influxdb:
+    image: influxdb:1.2.0-alpine
+    volumes:
+      - influxdb-data:/var/lib/influxdb
+  telegraf:
+    build: telegraf
+    links:
+      - influxdb
+volumes:
+  grafana-log:
+  grafana-data:
+  grafana-config:
+  influxdb-data:
