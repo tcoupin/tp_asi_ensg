@@ -1,0 +1,7 @@
+version: "3.0"
+services:
+  httpd:
+    image: httpd:alpine
+    ports:
+      - "8081:80"
+    command: bash -c "cp /etc/hostname /usr/local/apache2/htdocs/index.html && httpd-foreground"

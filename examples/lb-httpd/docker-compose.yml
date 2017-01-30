@@ -1,0 +1,21 @@
+version: "3.0"
+services:
+  httpd:
+    image: httpd:alpine
+    command: bash -c "cp /etc/hostname /usr/local/apache2/htdocs/index.html && httpd-foreground"
+    labels:
+      traefik.port: "80"
+      traefik.frontend.rule: "Host:127.0.0.1,localhost"
+      traefik.backend: "httpd"
+    depends_on: 
+      - lb
+  lb:
+    image: traefik
+    ports:
+      - "8080:8080"
+      - "8081:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      traefik.enable: "false"
+    command: --docker --docker.watch --web
