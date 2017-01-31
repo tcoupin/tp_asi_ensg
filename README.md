@@ -23,7 +23,7 @@ L'image à utiliser est `owncloud`, disponible sur https://hub.docker.com/r/libr
 
 ### Owncloud SQLite : 2 Tiers
 
-Un seul conteneur owncloud et la base mysql.
+Un seul conteneur : owncloud et la base sqlite.
 
 Utiliser l'option `--cpu-quota=25000` de `docker run` pour limiter l'utilisation du CPU à 25% et simuler des limites matérielles.
 
