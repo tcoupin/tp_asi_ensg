@@ -35,7 +35,7 @@ Notre solution est (artificiellement) lente, il faudrait la répartir sur plusie
 
 La base de donnée doit être déportée dans une instance séparée. L'image à utiliser est `mysql` ou `mariadb`.
 
-### Cluster Owncloud MySQL : haute disponibilité
+### Cluster Owncloud MySQL : distribution
 
 Pour utiliser plus de ressources, on va déployer plusieurs instances owncloud derrière un répartiteur de charge.
 
