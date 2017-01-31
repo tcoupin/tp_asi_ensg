@@ -11,7 +11,7 @@ Les exemples pour docker-compose :
 
 - **[simple-httpd](./examples/01-simple-httpd)** : démarrer un serveur web simple, *observer les difficultés de scaling*
 - **[lb-httpd](./examples/02-lb-httpd)** : une distribution des requêtes HTTP sur plusieurs serveurs web, *répartition des ressources*
-- **[system-proe](./examples/03-system-probe)** : un ensemble de collecter et afficher des métriques systèmes, *architecture par services*
+- **[system-probe](./examples/03-system-probe)** : un ensemble de collecter et afficher des métriques systèmes, *architecture par services*
 
 ## Les TPs
 
