@@ -1,5 +1,4 @@
-# tp_asi_ensg
-TP du cours d'architecture des systèmes d'informations pour l'ENSG
+# TP du cours d'architecture des systèmes d'informations pour l'ENSG
 
 Les supports de cours :
 
@@ -46,3 +45,19 @@ Pour le répartiteur, vous avez le choix entre :
 - traefik (config statique ou dynamique)
 
 ## Le projet
+
+Nous avons 3,5 jours pour jouer avec une vingtaines de RaspeberryPi :)
+
+**But du jeu** : mettre en place une IDG (as a Service).
+Fonctionnalités/contraintes :
+- offre de service publique :
+  - wms raster (rok4) / wms vecteur (Geoserver?)
+  - site avec carte dynamique et un catalogue
+- administration :
+  - intégration de données vecteur/raster
+  - suivi des consommations
+- infrastructure
+  - suivi de l'état des RPI
+  - élasticité
+  - haute disponibilité et distribution
+  - mise à jour des composants sans interuption de service
