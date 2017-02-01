@@ -72,7 +72,10 @@ Je fournis les cartes SD prêtes : HypriotOS, Git et ce qui vous ferait plaisir.
 
 ### Rendu
 
+Une infra qui tourne.
+
 Un dépôt Github :
+
 - analyse
 - proposition architecture et organisation de la conception et du build
 - détails de chaque composant : solution, relation, risque
