@@ -48,7 +48,8 @@ Pour le répartiteur, vous avez le choix entre :
 
 Nous avons 3,5 jours pour jouer avec une vingtaines de RaspeberryPi :)
 
-**But du jeu** : mettre en place une IDG (as a Service).
+### But du jeu : mettre en place une IDG (as a Service)
+
 Fonctionnalités/contraintes :
 - offre de service publique :
   - wms raster (rok4) / wms vecteur (Geoserver?)
@@ -56,8 +57,28 @@ Fonctionnalités/contraintes :
 - administration :
   - intégration de données vecteur/raster
   - suivi des consommations
+  - si nécessaire, forge pour les builds des images docker
 - infrastructure
   - suivi de l'état des RPI
   - élasticité
   - haute disponibilité et distribution
   - mise à jour des composants sans interuption de service
+
+### Organisation
+
+A vous de choisir comment vous organiser votre temps et vos ressources.
+
+Je fournis les cartes SD prêtes : HypriotOS, Git et ce qui vous ferait plaisir.
+
+### Rendu
+
+Un dépôt Github :
+- analyse
+- proposition architecture et organisation de la conception et du build
+- détails de chaque composant : solution, relation, risque
+- procédures
+- PAQ (sauvegarde, résilience, surface d'attaque...)
+- script et config pour un redéploiement
+- ...
+
+La contribution de chacun sera évaluée.
