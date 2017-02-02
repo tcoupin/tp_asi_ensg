@@ -1,5 +1,11 @@
 # Playbooks ansible
 
+## Ping
+
+```
+ansible all -i inventory -m ping
+```
+
 ## Setup initial
 
 ```
