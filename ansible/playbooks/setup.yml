@@ -1,0 +1,32 @@
+---
+- name: Prerequis Ansible
+  hosts: pi
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Install python
+      become: yes
+      raw: head -c 0 /usr/bin/python || (HTTP_PROXY=http://{{ proxy }} && HTTPS_PROXY=http://{{ proxy }} && apt-get update && apt-get -y install python)
+
+- name: Setup RPI
+  hosts: pi
+  become: yes
+  gather_facts: no
+  roles:
+    # - base
+    - docker
+
+
+# - name: Copy files
+#   hosts: pi
+#   tags:
+#     - copy
+#   tasks:
+#     - name: Copy files ssh
+#       copy: src=./resources/ssh/{{ item.file }} dest=/home/pirate/.ssh/{{ item.file }} mode={{ item.mode }}
+#       with_items:
+#         - {file: config, mode: 600}
+#         - {file: id_rsa_gustopi, mode: 600}
+#         - {file: id_rsa_github, mode: 600}
+#         - {file: id_rsa_aws_from_pi, mode: 600}
+...

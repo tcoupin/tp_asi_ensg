@@ -1,0 +1,18 @@
+---
+- name: config directory
+  become: yes
+  file: dest=/etc/systemd/system/docker.service.d state=directory
+
+- name: custom options
+  become: yes
+  template: dest=/etc/systemd/system/docker.service.d/01-main.conf src=main.conf.j2
+  notify:
+    - Restart docker engine
+  
+
+- name: proxy
+  become: yes
+  template: dest=/etc/systemd/system/docker.service.d/02-http-proxy.conf src=http-proxy.conf.j2
+  notify:
+    - Restart docker engine
+...

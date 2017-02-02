@@ -1,0 +1,4 @@
+[Service]
+{% if proxy %}
+Environment="HTTP_PROXY=http://{{ proxy }}/"
+{% endif %}

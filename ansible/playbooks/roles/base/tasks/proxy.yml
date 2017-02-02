@@ -1,0 +1,15 @@
+---
+- name: Proxy for apt-get
+  become: yes
+  lineinfile: "dest=/etc/apt/apt.conf.d/00proxy regexp=Acquire line='Acquire::http::Proxy \"http://{{ proxy }}\";' create=yes"
+
+- name: Proxy in environnement
+  become: yes
+  lineinfile: "dest=/home/pirate/.bashrc regexp={{ item }} line='export {{ item }}=\"http://{{ proxy }}\"'"
+  with_items:
+    - http_proxy
+    - https_proxy
+    - HTTP_PROXY
+    - HTTPS_PROXY
+
+...

@@ -1,0 +1,12 @@
+---
+- name: Hostname
+  become: yes
+  lineinfile: "dest=/boot/device-init.yaml regexp=hostname: line='hostname: {{ inventory_hostname }}'"
+  notify:
+    - Reboot
+    - Wait for server to restart
+
+- name: Hostname in etc/hosts
+  become: yes
+  lineinfile: dest=/etc/hosts regexp=^127.0.1.1 line="127.0.1.1  {{ inventory_hostname }}"
+...
