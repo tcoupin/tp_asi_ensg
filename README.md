@@ -66,19 +66,19 @@ Fonctionnalités/contraintes :
 
 ### Organisation
 
-A vous de choisir comment vous organiser votre temps et vos ressources.
+A vous de choisir comment vous organisez votre temps et vos ressources.
 
 Je fournis les cartes SD prêtes : HypriotOS, Git et ce qui vous ferait plaisir.
 
 ### Rendu
 
-Une infra qui tourne.
+Un début d'infra qui tourne.
 
 Un dépôt Github :
 
 - analyse
-- proposition architecture et organisation de la conception et du build
-- détails de chaque composant : solution, relation, risque
+- proposition d'architecture et organisation de la conception et du build
+- détails de chaque composant : solution, relations, risques
 - procédures
 - PAQ (sauvegarde, résilience, surface d'attaque...)
 - script et config pour un redéploiement
