@@ -1,3 +1,14 @@
 [pi]
-pi1_1 ansible_host=192.168.90.91 ansible_user=pirate
-pi3_1 ansible_host=192.168.90.21 ansible_user=pirate
+pi2s001 ansible_host=172.31.57.64  ansible_user=pirate
+pi2s002 ansible_host=172.31.57.63  ansible_user=pirate
+pi2s003 ansible_host=172.31.57.70  ansible_user=pirate
+pi2s004 ansible_host=172.31.57.69  ansible_user=pirate
+pi2s005 ansible_host=172.31.57.62  ansible_user=pirate
+pi2s006 ansible_host=172.31.57.68  ansible_user=pirate
+pi2s007 ansible_host=172.31.43.29  ansible_user=pirate
+pi2s008 ansible_host=172.31.57.66  ansible_user=pirate
+pi3s001 ansible_host=172.31.41.249 ansible_user=pirate
+pi3s002 ansible_host=172.31.41.238 ansible_user=pirate
+pi3s003 ansible_host=172.31.41.198 ansible_user=pirate
+
+
