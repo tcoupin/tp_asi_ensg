@@ -8,6 +8,9 @@
   when: proxy is defined
 
 
+- name: "Build hosts file"
+  lineinfile: dest=/etc/hosts regexp='.*{{item}} .*$' line="{{hostvars[item]['ansible_host']}} {{item}}" state=present
+  with_items: "{{ groups['all'] }}"
 
 
 
