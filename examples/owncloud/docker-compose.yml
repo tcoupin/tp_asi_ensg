@@ -1,0 +1,31 @@
+version: "3.0"
+
+services:
+  oc-db:
+    image: mysql
+    volumes:
+      - oc-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toor 
+      MYSQL_DATABASE: oc-database 
+      MYSQL_USER: oc-user 
+      MYSQL_PASSWORD: ilpleut
+
+
+  oc-app:
+    image: owncloud
+    volumes:
+      - oc-config:/var/www/html/config
+      - oc-data:/var/www/html/data
+    links:
+      - oc-db:mysql
+    ports:
+      - "8080:80"
+
+volumes:
+  oc-db:
+  oc-data:
+  oc-config:
+
+
+
