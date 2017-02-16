@@ -1,0 +1,9 @@
+version: "3.0"
+services:
+  app:
+    image: node:alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - ../print-hostname:/usr/src/app
+    command: node /usr/src/app/app.js

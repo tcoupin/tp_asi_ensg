@@ -1,12 +1,14 @@
 version: "3.0"
 services:
-  httpd:
-    image: httpd:alpine
-    command: bash -c "cp /etc/hostname /usr/local/apache2/htdocs/index.html && httpd-foreground"
+  app:
+    image: node:alpine
+    volumes:
+      - ../print-hostname:/usr/src/app
+    command: node /usr/src/app/app.js
     labels:
       traefik.port: "80"
-      traefik.frontend.rule: "Host:127.0.0.1,localhost"
-      traefik.backend: "httpd"
+      traefik.frontend.rule: "Host:127.0.0.1,localhost,hp1410p002.ensg.eu"
+      traefik.backend: "app"
     depends_on: 
       - lb
   lb:
