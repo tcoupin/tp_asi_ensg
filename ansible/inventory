@@ -1,14 +1,18 @@
-[pi]
-pi2s001 ansible_host=172.31.57.64  ansible_user=pirate
-pi2s002 ansible_host=172.31.57.63  ansible_user=pirate
-pi2s003 ansible_host=172.31.57.70  ansible_user=pirate
-pi2s004 ansible_host=172.31.57.69  ansible_user=pirate
-pi2s005 ansible_host=172.31.57.62  ansible_user=pirate
-pi2s006 ansible_host=172.31.57.68  ansible_user=pirate
-pi2s007 ansible_host=172.31.43.29  ansible_user=pirate
-pi2s008 ansible_host=172.31.57.66  ansible_user=pirate
-pi3s001 ansible_host=172.31.41.249 ansible_user=pirate
-pi3s002 ansible_host=172.31.41.238 ansible_user=pirate
-pi3s003 ansible_host=172.31.41.198 ansible_user=pirate
+[pi2]
+piensg005 ansible_host=172.31.57.64  ansible_user=pirate postit_nom=pi2_1
+piensg004 ansible_host=172.31.57.63  ansible_user=pirate postit_nom=pi2_2
+piensg011 ansible_host=172.31.57.70  ansible_user=pirate postit_nom=pi2_3
+piensg010 ansible_host=172.31.57.69  ansible_user=pirate postit_nom=pi2_4
+piensg003 ansible_host=172.31.57.62  ansible_user=pirate postit_nom=pi2_5
+piensg009 ansible_host=172.31.57.68  ansible_user=pirate postit_nom=pi2_6
+piensg018 ansible_host=172.31.56.159 ansible_user=pirate postit_nom=pi2_7
+piensg007 ansible_host=172.31.57.66  ansible_user=pirate postit_nom=pi2_8
 
+[pi3]
+piensg015 ansible_host=172.31.57.156 ansible_user=pirate postit_nom=pi3_1
+piensg016 ansible_host=172.31.56.157 ansible_user=pirate postit_nom=pi3_2
+piensg017 ansible_host=172.31.56.158 ansible_user=pirate postit_nom=pi3_3
 
+[pi:children]
+pi2
+pi3
