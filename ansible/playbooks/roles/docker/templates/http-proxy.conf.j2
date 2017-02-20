@@ -1,4 +1,5 @@
 [Service]
 {% if proxy %}
 Environment="HTTP_PROXY=http://{{ proxy }}/"
+Environment="NO_PROXY=ensg.eu,localhost"
 {% endif %}
