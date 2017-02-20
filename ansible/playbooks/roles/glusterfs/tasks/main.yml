@@ -1,0 +1,13 @@
+---
+- name: Installation gfs
+  become: yes
+  apt: update_cache=yes name=glusterfs-server cache_valid_time=604800 # 7 jours
+
+- name: start glusterfs
+  service: name=glusterfs-server state=started enabled=yes
+  become: yes
+
+- name: mkdir /data
+  become: yes
+  file: dest=/data state=directory
+...

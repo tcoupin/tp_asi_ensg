@@ -1,0 +1,8 @@
+---
+- name: Montage Glusterfs
+  hosts: pi
+  become: yes
+  tasks:
+    - file: "dest=/mnt/Data state=directory"
+    - mount: "name=/mnt/Data src=172.31.57.64:/gfsdata fstype=glusterfs state=mounted"
+...
